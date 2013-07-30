@@ -1,0 +1,77 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: CodeSkills\n"
+"POT-Creation-Date: 2013-06-25 16:47-0600\n"
+"PO-Revision-Date: 2013-06-25 16:47-0600\n"
+"Last-Translator: \n"
+"Language-Team:  <contact@codeskills.net>\n"
+"Language: Spanish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: /Applications/MAMP/htdocs/CodeSkills\n"
+
+#: /Applications/MAMP/htdocs/CodeSkills/apps/clients/admin.py:18
+#: /Applications/MAMP/htdocs/CodeSkills/apps/clients/models.py:22
+msgid "Email"
+msgstr "Correo electrónico"
+
+#: /Applications/MAMP/htdocs/CodeSkills/apps/clients/models.py:14
+msgid "Location"
+msgstr "Ubicación"
+
+#: /Applications/MAMP/htdocs/CodeSkills/apps/clients/models.py:15
+msgid "Locations"
+msgstr "Ubicaciones"
+
+#: /Applications/MAMP/htdocs/CodeSkills/apps/clients/models.py:19
+msgid "Company"
+msgstr "Empresa"
+
+#: /Applications/MAMP/htdocs/CodeSkills/apps/clients/models.py:20
+msgid "Contact"
+msgstr "Contacto"
+
+#: /Applications/MAMP/htdocs/CodeSkills/apps/clients/models.py:21
+msgid "Address"
+msgstr "Dirección"
+
+#: /Applications/MAMP/htdocs/CodeSkills/apps/clients/models.py:23
+msgid "Skype"
+msgstr "Skype"
+
+#: /Applications/MAMP/htdocs/CodeSkills/apps/clients/models.py:24
+msgid "Website"
+msgstr "Sitio Web"
+
+#: /Applications/MAMP/htdocs/CodeSkills/apps/clients/models.py:25
+msgid "Linkedin"
+msgstr "Linkedin"
+
+#: /Applications/MAMP/htdocs/CodeSkills/apps/clients/models.py:26
+msgid "Twitter"
+msgstr "Twitter"
+
+#: /Applications/MAMP/htdocs/CodeSkills/apps/clients/models.py:27
+msgid "Facebook"
+msgstr "Facebook"
+
+#: /Applications/MAMP/htdocs/CodeSkills/apps/clients/models.py:28
+msgid "Phone"
+msgstr "Teléfono"
+
+#: /Applications/MAMP/htdocs/CodeSkills/apps/clients/models.py:29
+msgid "Mobile"
+msgstr "Celular"
+
+#: /Applications/MAMP/htdocs/CodeSkills/apps/clients/models.py:30
+msgid "Size"
+msgstr "Tamaño"
+
+#: /Applications/MAMP/htdocs/CodeSkills/apps/clients/models.py:31
+msgid "Industry"
+msgstr "Industria"

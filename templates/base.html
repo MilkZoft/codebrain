@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es" ng-app>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<title>{% block title %}CodeSkills{% endblock title %}</title>
+
+	<link rel="stylesheet" type="text/css" href="/static/css/default.css" />
+	<link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="/static/css/mediaqueries.css" />
+	<link rel="stylesheet" type="text/css" href="/static/css/bootstrap/bootstrap-codejobs.css" />
+</head>
+
+<body>	
+	<header>
+		<div id="fb-root"></div>
+		<div id="topbar-wrapper">
+			<div id="topbar">
+				<nav>
+					<ul>
+						<li class="current"><a href="#"><?php echo __("Menu")?></a></li>
+						<li><a href="<?php echo path(); ?>"><?php echo __("Home"); ?></a></li>
+						<li><a href="<?php echo path("codes"); ?>"><?php echo __("Codes"); ?></a></li>
+						<li><a href="<?php echo path("forums"); ?>"><?php echo __("Forums"); ?></a></li>
+						<li><a href="http://www.youtube.com/codejobs" target="_blank"><?php echo __("Videos"); ?></a></li>
+						<li><a href="<?php echo path("bookmarks"); ?>"><?php echo __("Bookmarks"); ?></a></li>						
+						<li>				
+					</ul>
+				</nav>				
+
+				<div id="top-box-languages" class="toggle">
+					<a href="<?php echo path("es"); ?>" title="<?php echo __("Spanish"); ?>" class="flag es-flag"></a>
+					<a href="<?php echo path("en"); ?>" title="<?php echo __("English"); ?>" class="flag en-flag"></a>
+					<a href="<?php echo path("fr"); ?>" title="<?php echo __("French"); ?>" class="flag fr-flag"></a>
+					<a href="<?php echo path("pt"); ?>" title="<?php echo __("Portuguese"); ?>" class="flag pt-flag"></a>
+					<a href="<?php echo path("it"); ?>" title="<?php echo __("Italian"); ?>" class="flag it-flag"></a>
+				</div>
+
+				<div id="top-box-register" class="toggle">
+					<span class="bold">Are you new on CodeJobs?, Register!</span><br />
+
+					<form action="users/register" method="post" class="form-register">
+						<fieldset>
+							<input id="register-name" name="name" class="register-input" type="text" required placeholder="Full Name" /> <br />
+							<input id="register-email" name="email" class="register-input" type="email" required placeholder="Email" /> <br />
+							<input id="register-password" name="password" class="register-input" type="password" required placeholder="Password" /> <br />
+							<input name="register" class="register-submit" type="submit" value="Register on CodeJobs!" /> <br />
+							<a href="users/service/facebook/login" title="Sign in with Facebook"><img src="www/applications/users/views/images/login/facebook_es.png" alt="Sign in with Facebook" class="no-border" /><br /><a href="users/service/twitter" title="Sign in with Twitter"><img src="www/applications/users/views/images/login/twitter_es.png" alt="Sign in with Twitter" class="no-border" /></a>
+						</fieldset>
+					</form>
+				</div>
+
+				<div id="top-box-login" class="toggle">
+					<span class="bold">Do you Have an account?, Login!</span><br />
+
+					<form action="users/login" method="post" class="form-login">
+						<fieldset>
+							<input id="login-username" name="username" class="login-input" type="text" required placeholder="Username or Email" /> <br />
+							<input id="login-password" name="password" class="login-input" type="password" required placeholder="Password" /> 
+							<br />
+							<a href="users/recover">Forgot your password?</a>
+
+							<input name="login" class="login-submit" type="submit" value="Login" />		 					
+							<br />
+							<br />
+
+							<a href="users/service/facebook/login" title="Sign in with Facebook"><img src="www/applications/users/views/images/login/facebook_es.png" alt="Sign in with Facebook" class="no-border" /><br /><a href="users/service/twitter" title="Sign in with Twitter"><img src="www/applications/users/views/images/login/twitter_es.png" alt="Sign in with Twitter" class="no-border" /></a>					
+						</fieldset>
+					</form>
+				</div>
+
+				<div id="top-box-profile" class="toggle">
+					<div class="top-box-profile">
+						<div style="float: left; width: 90px;">	
+							<a href="users/avatar" title="Edit avatar"><img src="www/lib/files/images/users/default.png" class="dotted" style="max-width: 70px;" /></a>
+						</div>
+
+						<div style="float: left; width: 170px; line-height: 15px; margin-left: 10px;">
+							<span class="bold"><a href="users/cv">Username</a></span> <br />
+							<span class="small grey"><a href="user/username">See my profile page</a></span><br />
+
+							<div style="width: 170px; border-top: 1px dotted #CCC; margin-top: 5px; margin-bottom: 5px;"></div>
+
+							<span class="small grey"><a href="blog/admin">My posts: <span id="my_blog">10</span></a></span><br />
+							<span class="small grey"><a href="codes/admin">My codes: <span id="my_codes">99</span></a></span><br />
+							<span class="small grey"><a href="bookmarks/admin">My bookmarks: <span id="my_bookmarks">99</span></a>
+							<span>My Vacancies</span><br />
+
+							<div style="width: 170px; border-top: 1px dotted #CCC; margin-top: 5px; margin-bottom: 5px;"></div>
+
+							<span class="small grey"><a href="<?php echo path("blog/add"); ?>"><?php echo __("Publish a post"); ?></a></span><br />
+							<span class="small grey"><a href="<?php echo path("codes/add"); ?>"><?php echo __("Publish a code"); ?></a></span><br />
+							<span class="small grey"><a href="<?php echo path("bookmarks/add"); ?>"><?php echo __("Publish a bookmark"); ?></a></span><br />
+							<span class="small grey"><a href="<?php echo path("jobs/add"); ?>"><?php echo __("Publish a job"); ?></a></span><br />
+
+							<div style="width: 170px; border-top: 1px dotted #CCC; margin-top: 5px; margin-bottom: 5px;"></div>
+
+							<span class="small grey"><a href="<?php echo path("users/cv"); ?>"><?php echo __("Account settings"); ?></a></span><br />
+							<span class="small grey"><a href="<?php echo path("users/deactivate"); ?>"><?php echo __("Deactivate my account"); ?></a></span><br />
+
+							<div style="width: 170px; border-top: 1px dotted #CCC; margin-top: 5px; margin-bottom: 5px;"></div>
+
+							<!--span class="small grey"><a href="#"><?php echo __("Update my Resume"); ?></a></span><br />
+
+							<div style="width: 170px; border-top: 1px dotted #CCC; margin-top: 5px; margin-bottom: 5px;"></div-->
+
+							<?php
+								if (SESSION("ZanUserPrivilegeID") <= 2) {
+								?>
+									<span class="small grey"><a href="<?php echo path("cpanel"); ?>"><?php echo __("Go to CPanel"); ?></a></span><br />
+								<?php
+								}
+							?>
+
+							<span class="small grey"><a href="<?php echo path("users/logout"); ?>"><?php echo __("Logout"); ?></a></span><br />
+						</div>
+
+						<div class="clear"></div>
+					</div>
+				</div>				
+
+				<div id="top-box">
+					<ul class="top-box-ul">
+						<li class="" style="margin-right:5px;">
+							<div class="input-append">
+								<select id="search-app" class="info" style="width:115px; margin-top: 3px; margin-right: 5px;">
+								  	<option value="blog"><?php echo __("Blog"); ?></option>
+								  	<option value="codes"><?php echo __("Codes"); ?></option>
+								  	<option value="bookmarks"><?php echo __("Bookmarks"); ?></option>								  	
+								</select> 
+								
+								<form id="search-nav">
+							  		<input id="search-term" class="span2" placeholder="<?php echo __("Write your search..."); ?>" type="text" style="margin-top: 3px;">
+							  		<input id="search-app-hidden" type="hidden">
+							  		<input id="search-term-hidden" type="hidden">
+							  		<input type="button" id="search" class="btn btn-inverse" style="margin-top: 2px;" value="<?php echo __("Search"); ?>" />
+							  	</form>
+							</div> 
+						</li>
+						<li class="">
+							<a id="display-languages" href="#" title="<?php echo __("Language"); ?>">
+								<?php echo getLanguage(whichLanguage(), true); ?> <?php echo __("Language"); ?> <span class="arrow-down"></span>
+							</a>
+						</li>
+						<?php
+							if (!SESSION("ZanUser")) {
+						?>
+								<li class="">
+									<a id="display-register" href="#" title="<?php echo __("Register!"); ?>">
+										<?php echo __("Register!"); ?> <span class="arrow-down"></span>
+									</a>
+								</li>
+
+								<li class="">
+									<a id="display-login" href="#" title="<?php echo __("Login"); ?>">
+										<?php echo __("Login"); ?> <span class="arrow-down"></span>
+									</a>
+								</li>
+						<?php
+							} else {
+						?>
+								<li class="">
+									<a id="display-profile" href="#" title="<?php echo __("Hi"); ?>">
+										<?php echo __("Hi") .', <span style="color: #00a0ff">'. SESSION("ZanUser") .'</span>'; ?> <span class="arrow-down"></span>
+									</a>
+								</li>
+						<?php
+							}
+						?>
+					</ul>
+				</div>
+			</div>
+
+			<div id="search-results" class="search-results">
+				<div id="search-results-wrapper" class="search-results-wrapper"></div>
+			</div>
+
+			<div class="clear"></div>
+		</div>
+		<?php
+		if (!defined("HIDE_WRAPPER")) {
+		?>
+			<div id="wrapper">
+				<div id="logo">
+					<a href="<?php echo path(); ?>"><img src="<?php echo path("www/lib/themes/newcodejobs/images/logo.png", true); ?>" alt="CodeJobs" class="noborder" /></a>
+				</div>
+			
+				<nav>
+					<ul>
+						<li><a href="<?php echo path("$application/tag/ajax"); ?>">Ajax</a></li>
+						<li><a href="<?php echo path("$application/tag/android"); ?>">Android</a></li>
+						<li><a href="<?php echo path("$application/tag/backbone"); ?>">Backbone.js</a></li>
+						<li><a href="<?php echo path("$application/tag/codeigniter"); ?>">CodeIgniter</a></li>
+						<li><a href="<?php echo path("$application/tag/css3"); ?>">CSS3</a></li>
+						<li><a href="<?php echo path("$application/tag/databases"); ?>">Databases</a></li>
+						<li><a href="<?php echo path("$application/tag/emarketing"); ?>">eMarketing</a></li>
+						<li><a href="<?php echo path("$application/tag/git"); ?>">Git &amp; Github</a></li>
+						<li><a href="<?php echo path("$application/tag/html5"); ?>">HTML5</a></li>
+						<li><a href="<?php echo path("$application/tag/ios"); ?>">iOS</a></li>
+						<li><a href="<?php echo path("$application/tag/java"); ?>">Java</a></li>
+						<li><a href="<?php echo path("$application/tag/javascript"); ?>">Javascript</a></li>
+						<li><a href="<?php echo path("$application/tag/jquery"); ?>">jQuery</a></li>
+						<li><a href="<?php echo path("$application/tag/mongodb"); ?>">MongoDB</a></li>
+						<li><a href="<?php echo path("$application/tag/mysql"); ?>">MySQL</a></li>
+						<li><a href="<?php echo path("$application/tag/nodejs"); ?>">Node.js</a></li>
+						<li><a href="<?php echo path("$application/tag/php"); ?>">PHP</a></li>
+						<li><a href="<?php echo path("$application/tag/python"); ?>">Python</a></li>
+						<li><a href="<?php echo path("$application/tag/ruby"); ?>">Ruby</a></li>
+						<li><a href="<?php echo path("$application/tag/ror"); ?>">RoR</a></li>
+						<li><a href="<?php echo path("$application/tag/social-media"); ?>">Social Media</a></li>		
+						<li><a href="<?php echo path("$application/tag/zanphp"); ?>">ZanPHP</a></li>
+					</ul>
+				</nav>
+
+				<div class="clear"></div>
+			</div>
+		<?php
+			}
+		?>
+	</header>
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		
+	</head>
+
+	<body>
+		<header>
+			<h1>CodeSkills</h1>
+		</header>
+
+		<section>
+			{% block content %}
+
+			{% endblock content %}
+		</section>
+
+		<footer>
+
+		</footer>
+	</body>
+</html>
