@@ -18,5 +18,5 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
     url(r'^public/media/(?P<path>.*)$', 'django.views.static.serve', {'document_root':'/public/media/'}),
-    url(r'^public/static/(?P<path>.*)$', 'django.views.static.serve', {'document_root':'/public/static/'}),
+    url(r'^public/static/(?P<path>.*)$', 'django.views.static.serve', {'document_root':'/home/czantany/public_html/codebrain.org/public/static'}),
 )
