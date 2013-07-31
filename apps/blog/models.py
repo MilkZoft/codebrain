@@ -6,7 +6,7 @@ from django.utils.translation import ugettext as _
 class Blog(models.Model):
 	title 			= models.CharField(_('Title'), max_length = 250)
 	slug 			= models.CharField(_('Slug'), max_length = 250)
-	content 		= models.models.TextField()
+	content 		= models.TextField()
 	tags 			= models.CharField(_('Tags'), max_length = 100)
 	author 			= models.CharField(_('Tags'), max_length = 50)
 	creation_date 	= models.DateField("Creation Date", default = datetime.today)
