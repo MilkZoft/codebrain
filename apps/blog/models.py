@@ -3,7 +3,7 @@ from django.db import models
 from datetime import datetime
 from django.utils.translation import ugettext as _
 
-class Blog(models.Model):
+class Posts(models.Model):
 	title 			= models.CharField(_('Title'), max_length = 250)
 	slug 			= models.CharField(_('Slug'), max_length = 250)
 	content 		= models.TextField()
